@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Guess the Number</string>
+    <string name="elegir_numero_btn_txt">Choose a Number</string>
+    <string name="adivinar_numero_btn_txt">Guess a Number</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="choose_an_option_txt">How would you like to play today?</string>
+
+</resources>
