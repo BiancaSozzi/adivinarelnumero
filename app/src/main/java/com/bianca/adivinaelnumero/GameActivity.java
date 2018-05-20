@@ -1,13 +1,11 @@
 package com.bianca.adivinaelnumero;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
-import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -52,6 +50,7 @@ public class GameActivity extends AppCompatActivity {
             default:
                 Toast.makeText(getApplicationContext(), R.string.error_message_game_option, Toast.LENGTH_SHORT).show();
         }
+
 
 
     }
@@ -116,7 +115,8 @@ public class GameActivity extends AppCompatActivity {
             correctNumBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(getApplicationContext(), "Ha ganado", Toast.LENGTH_SHORT).show();
+                    Intent gamefinished = new Intent(getApplicationContext(), FinishGameActivity.class);
+                    startActivity(gamefinished);
                 }
             });
 
@@ -133,6 +133,8 @@ public class GameActivity extends AppCompatActivity {
                         possibleNumber.setText("");
                     }else{
                         messageText.setText("Has adivinado el número !");
+                        Intent gamefinished = new Intent(getApplicationContext(), FinishGameActivity.class);
+                        startActivity(gamefinished);
                     }
 
                 }
