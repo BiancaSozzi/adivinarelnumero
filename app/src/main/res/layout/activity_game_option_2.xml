@@ -21,7 +21,7 @@
 
     <EditText
         android:id="@+id/number_text_2"
-        android:layout_width="150dp"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         tools:text="30"
         android:textSize="80sp"
@@ -32,7 +32,7 @@
         android:background="@drawable/number_box_style"
         android:layout_marginTop="30dp"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"/>
+        android:paddingRight="10dp" />
     <TextView
         android:id="@+id/message_text"
         android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Verificar"
+        android:text="@string/text_button_verify"
         android:background="@drawable/number_box_style"
         android:backgroundTint="@android:color/holo_green_dark"
         android:layout_marginBottom="100dp"/>

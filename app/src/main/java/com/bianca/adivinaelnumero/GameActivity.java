@@ -126,13 +126,13 @@ public class GameActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     number = Integer.parseInt(possibleNumber.getText().toString());
                     if(number < my_number){
-                        messageText.setText("El numero es mayor");
+                        messageText.setText(R.string.message_text_up);
                         possibleNumber.setText("");
                     }else if(number> my_number){
-                        messageText.setText("El numero es menor");
+                        messageText.setText(R.string.message_text_down);
                         possibleNumber.setText("");
                     }else{
-                        messageText.setText("Has adivinado el número !");
+                        messageText.setText(R.string.message_text_correct_number);
                         Intent gamefinished = new Intent(getApplicationContext(), FinishGameActivity.class);
                         startActivity(gamefinished);
                     }
@@ -154,8 +154,8 @@ public class GameActivity extends AppCompatActivity {
         lowerBtn.setVisibility(View.VISIBLE);
         correctNumBtn.setVisibility(View.VISIBLE);
 
-        titleText.setText("Elige un número entre 1 y 100");
-        messageText.setText("Este es su numero?");
+        titleText.setText(R.string.title_text_gameoption1);
+        messageText.setText(R.string.message_text_gameoption1);
 
     }
 
@@ -167,7 +167,7 @@ public class GameActivity extends AppCompatActivity {
         messageText.setVisibility(View.VISIBLE);
 
 
-        titleText.setText("He elegido un numero entre 1 y 100. Intenta adivinar cual es..");
+        titleText.setText(R.string.title_text_gameoption2);
 
     }
 

@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Juego Terminado!!"
+        android:text="@string/title_text_finishgame"
         android:textSize="35sp"
         android:textAlignment="center"
         android:layout_marginTop="20dp"
@@ -26,7 +26,7 @@
         android:id="@+id/restart_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Volver a jugar"
+        android:text="@string/text_btn_finishgame"
         android:layout_margin="20dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/button_style"

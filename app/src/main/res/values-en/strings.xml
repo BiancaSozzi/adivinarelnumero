@@ -5,5 +5,15 @@
     <string name="adivinar_numero_btn_txt">Guess a Number</string>
     <string name="welcome_text">Welcome</string>
     <string name="choose_an_option_txt">How would you like to play today?</string>
+    <string name="error_message_game_option">There was an error. Please try again.</string>
+    <string name="title_text_gameoption2">I think of a number between 1 and 100. Try to guess it..</string>
+    <string name="title_text_gameoption1">Choose a number between 1 and 100</string>
+    <string name="message_text_gameoption1">Is this your number?</string>
+    <string name="message_text_up">The number is bigger</string>
+    <string name="message_text_down">The number is smaller</string>
+    <string name="message_text_correct_number">The number is correct!!</string>
+    <string name="title_text_finishgame">That is all for now!!</string>
+    <string name="text_btn_finishgame">Play again!</string>
+    <string name="text_button_verify">Check</string>
 
 </resources>

@@ -5,5 +5,14 @@
     <string name="welcome_text">Bienvenido</string>
     <string name="choose_an_option_txt">Selecciona un modo de juego</string>
     <string name="error_message_game_option">Ha ocurrido un error. Vuelva a intentarlo</string>
+    <string name="title_text_gameoption2">He elegido un numero entre 1 y 100. Intenta adivinar cual es..</string>
+    <string name="title_text_gameoption1">Elige un número entre 1 y 100</string>
+    <string name="message_text_gameoption1">Este es tu numero?</string>
+    <string name="message_text_up">El numero es mayor</string>
+    <string name="message_text_down">El numero es menor</string>
+    <string name="message_text_correct_number">Has adivinado el número !</string>
+    <string name="title_text_finishgame">Juego Terminado!!</string>
+    <string name="text_btn_finishgame">Volver a jugar</string>
+    <string name="text_button_verify">Verificar</string>
 
 </resources>
