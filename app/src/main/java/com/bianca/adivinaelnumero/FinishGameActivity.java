@@ -24,6 +24,7 @@ public class FinishGameActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent main = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(main);
+                finish();
             }
         });
     }

@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putInt("game_option",1);
                 editor.apply();
+                finish();
             }
         });
 
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putInt("game_option",2);
                 editor.apply();
+                finish();
             }
         });
     }
@@ -53,5 +55,4 @@ public class MainActivity extends AppCompatActivity {
         guessNum = findViewById(R.id.guess_num_btn);
     }
 
-
-}
+  }

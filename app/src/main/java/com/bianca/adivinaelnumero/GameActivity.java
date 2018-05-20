@@ -106,9 +106,11 @@ public class GameActivity extends AppCompatActivity {
             lowerBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    max = number-1;
-                    number = findNumber(min, max);
-                    numberText.setText(String.valueOf(number));
+                        max = number - 1;
+                        if(max>1){
+                            number = findNumber(min, max);
+                            numberText.setText(String.valueOf(number));
+                        }
                 }
             });
 
@@ -117,6 +119,7 @@ public class GameActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     Intent gamefinished = new Intent(getApplicationContext(), FinishGameActivity.class);
                     startActivity(gamefinished);
+                    finish();
                 }
             });
 
@@ -125,16 +128,23 @@ public class GameActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     number = Integer.parseInt(possibleNumber.getText().toString());
-                    if(number < my_number){
-                        messageText.setText(R.string.message_text_up);
-                        possibleNumber.setText("");
-                    }else if(number> my_number){
-                        messageText.setText(R.string.message_text_down);
-                        possibleNumber.setText("");
+                    if(!(number <1 || number>100)){
+                        if(number < my_number){
+                            messageText.setText(R.string.message_text_up);
+                            possibleNumber.setText("");
+                        }else if(number> my_number){
+                            messageText.setText(R.string.message_text_down);
+                            possibleNumber.setText("");
+                        }else{
+                            messageText.setText(R.string.message_text_correct_number);
+                            Intent gamefinished = new Intent(getApplicationContext(), FinishGameActivity.class);
+                            startActivity(gamefinished);
+                            finish();
+                        }
+
                     }else{
-                        messageText.setText(R.string.message_text_correct_number);
-                        Intent gamefinished = new Intent(getApplicationContext(), FinishGameActivity.class);
-                        startActivity(gamefinished);
+                        Toast.makeText(getApplicationContext(), R.string.not_valid_number_text, Toast.LENGTH_SHORT).show();
+                        possibleNumber.setText("");
                     }
 
                 }
@@ -176,4 +186,5 @@ public class GameActivity extends AppCompatActivity {
         int middle = (min+max)/2;
         return middle;
     }
+
 }
