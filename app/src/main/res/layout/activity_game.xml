@@ -1,9 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GameActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:text="Piensa en un número del 1 al 100"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"/>
+    <TextView
+        android:id="@+id/number_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="20"
+        android:textSize="80sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/title_text"
+        android:layout_centerInParent="true"
+        android:background="@drawable/number_box_style"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        tools:text = "¿Este es tu número?"
+        android:textSize="20sp"
+        android:layout_below="@+id/number_text"
+        />
+    <LinearLayout
+        android:id="@+id/buttons_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message_text"
+        android:layout_margin="25dp">
+        <ImageButton
+            android:id="@+id/higher_button"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/number_box_style"
+            android:backgroundTint="@color/colorAccent"
+            android:src="@drawable/ic_add_black_50dp"/>
+
+        <ImageButton
+            android:id="@+id/lower_button"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/number_box_style"
+            android:backgroundTint="@color/colorAccent"
+            android:src="@drawable/ic_remove_black_50dp"/>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/correct_number_button"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+       android:layout_below="@id/buttons_panel"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/number_box_style"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:src="@drawable/ic_check_black_50dp"/>
+
+</RelativeLayout>
