@@ -4,5 +4,6 @@
     <string name="adivinar_numero_btn_txt">Adivinar Numero</string>
     <string name="welcome_text">Bienvenido</string>
     <string name="choose_an_option_txt">Selecciona un modo de juego</string>
+    <string name="error_message_game_option">Ha ocurrido un error. Vuelva a intentarlo</string>
 
 </resources>
