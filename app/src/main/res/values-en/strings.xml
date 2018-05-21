@@ -16,5 +16,7 @@
     <string name="text_btn_finishgame">Play again!</string>
     <string name="text_button_verify">Check</string>
     <string name="not_valid_number_text">Incorrect Value. Try again.</string>
+    <string name="info_box_text">Press on the top box to play</string>
+
 
 </resources>

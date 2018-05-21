@@ -44,6 +44,17 @@
         android:layout_marginTop="30dp"
         android:layout_below="@+id/number_text_2"
         />
+    <TextView
+        android:id="@+id/info_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text = "@string/info_box_text"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/message_text"
+        />
+
     <Button
         android:id="@+id/check_number_button"
         android:layout_width="100dp"
@@ -53,5 +64,5 @@
         android:text="@string/text_button_verify"
         android:background="@drawable/number_box_style"
         android:backgroundTint="@android:color/holo_green_dark"
-        android:layout_marginBottom="100dp"/>
+        android:layout_marginBottom="80dp"/>
 </RelativeLayout>

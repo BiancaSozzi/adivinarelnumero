@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class GameActivity extends AppCompatActivity {
 
-    TextView titleText, numberText, messageText;
+    TextView titleText, numberText, messageText, infoBox;
     ImageButton higherBtn, lowerBtn, correctNumBtn;
     EditText possibleNumber;
     Button verifyButton;
@@ -70,6 +70,7 @@ public class GameActivity extends AppCompatActivity {
             messageText = findViewById(R.id.message_text);
             possibleNumber = findViewById(R.id.number_text_2);
             verifyButton = findViewById(R.id.check_number_button);
+            infoBox = findViewById(R.id.info_box);
         }
 
     }
@@ -87,6 +88,7 @@ public class GameActivity extends AppCompatActivity {
             possibleNumber.setVisibility(View.GONE);
             messageText.setVisibility(View.GONE);
             verifyButton.setVisibility(View.GONE);
+            infoBox.setVisibility(View.GONE);
         }
 
 
@@ -127,7 +129,10 @@ public class GameActivity extends AppCompatActivity {
             verifyButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    number = Integer.parseInt(possibleNumber.getText().toString());
+                    infoBox.setVisibility(View.GONE);
+                    if(! (possibleNumber.getText().toString().length() == 0)){
+                        number = Integer.parseInt(possibleNumber.getText().toString());
+                    }
                     if(!(number <1 || number>100)){
                         if(number < my_number){
                             messageText.setText(R.string.message_text_up);
@@ -175,6 +180,7 @@ public class GameActivity extends AppCompatActivity {
         possibleNumber.setVisibility(View.VISIBLE);
         verifyButton.setVisibility(View.VISIBLE);
         messageText.setVisibility(View.VISIBLE);
+        infoBox.setVisibility(View.VISIBLE);
 
 
         titleText.setText(R.string.title_text_gameoption2);

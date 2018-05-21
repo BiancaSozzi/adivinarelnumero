@@ -15,5 +15,6 @@
     <string name="text_btn_finishgame">Volver a jugar</string>
     <string name="text_button_verify">Verificar</string>
     <string name="not_valid_number_text">Valor ingresado no válido</string>
+    <string name="info_box_text">Presiona sobre el recuadro superior para jugar</string>
 
 </resources>
