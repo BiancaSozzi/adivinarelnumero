@@ -193,4 +193,10 @@ public class GameActivity extends AppCompatActivity {
         return middle;
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent main = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(main);
+        finish();
+    }
 }
